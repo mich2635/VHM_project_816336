@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form onsubmit="logIn()">
+ENTER USER ID:<input type=number required id="id"><br>
+ENTER PASSWORD :<input type =password required id=password><br>
+<button>Login</button>
+</form>
+
+<script>
+function logIn(){
+	event.preventDefault();
+	let id=document.querySelector("#id").value;
+	let password = document.querySelector("#password").value;
+	localStorage.setItem("LOGGED_IN_USER",id);
+	
+	window.location.href="SaSide.html"
+}
+
+</script>
+</body>
+</html>
